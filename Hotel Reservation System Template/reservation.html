@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations - Mariner's Haven Hotel</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add any additional stylesheets or scripts as needed -->
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html" style="font-variant:small-caps;">Mariner's Haven Hotel</a>
+        </div>
+        <div class="nav-toggle" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="reservation.html">Reservations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="reservation-form">
+        <video autoplay muted loop id="bg-video">
+            <source src="reservation.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="form-content">
+            <h2 style="text-align: center;">Make a Reservation</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+    
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+    
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+    
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" name="guests" required>
+    
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+    
+    <div class="watermark">Sathya-github-del</div>
+
+    <script src="app.js"></script> 
+    <footer>
+        <p>&copy; 2024 Your Website Name. All rights reserved. Developed by <a href="https://github.com/Sathya-github-del">Sathya-github-del</a>.</p>
+    </footer>
+    
+</body>
+</html>
