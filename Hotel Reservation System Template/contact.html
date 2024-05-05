@@ -32,23 +32,55 @@
         </video>
     <section class="contact-form">
         <h2>Contact Us</h2>
-        <form action="#" method="post">
+        <form id="contactForm" action="#" method="post">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
-
+    
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-
+    
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
-
+    
             <button type="submit">Submit</button>
         </form>
     </section>
 
     <div class="watermark">Sathya-github-del</div>
 
-    <script src="app.js"></script> 
+    <script>
+        
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            // Get form data
+            const formData = new FormData(this);
+
+            // Prepare message
+            let message = '';
+            formData.forEach(function(value, key) {
+                message += `${key}: ${value}\n`;
+            });
+
+            // Send message to Telegram bot
+            const telegramBotToken = '7057297315:AAHP7hoC1xtw1-mEQB1Yo-y7xyCvUSoihnk';
+            const chatId = '900728380'; 
+            const telegramUrl = `https://api.telegram.org/bot${telegramBotToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+
+            fetch(telegramUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to send message to Telegram.');
+                    }
+                    alert('Form submitted successfully!');
+                    alert('THANKYOU');
+                })
+                .catch(error => {
+                    console.error('Error sending message to Telegram:', error);
+                    alert('Failed to submit form. Please try again later.');
+                });
+        });
+    </script>
     <footer>
         <p>&copy; 2024 Your Website Name. All rights reserved. Developed by <a href="https://github.com/Sathya-github-del">Sathya-github-del</a>.</p>
     </footer>

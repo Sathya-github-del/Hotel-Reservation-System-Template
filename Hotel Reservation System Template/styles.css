@@ -1,4 +1,3 @@
-/* Reset and basic styles */
 * {
     margin: 0;
     padding: 0;
@@ -217,7 +216,7 @@ p {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1; /* Ensure the video is behind other content */
+    z-index: -1; 
 }
 
 .reservation-form {
@@ -270,7 +269,7 @@ p {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0); /* Transparent background */
+    background: rgba(255, 255, 255, 0); 
 }
 
 .contact-form h2 {
@@ -314,11 +313,11 @@ p {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg); /* Rotate the text diagonally */
-    font-size: 8rem; /* Larger font size */
-    color: rgba(255, 255, 255, 0.5); /* Semi-transparent white color */
-    pointer-events: none; /* Ensure the watermark doesn't interfere with clicks */
-    z-index: 9999; /* Ensure the watermark appears above other content */
+    transform: translate(-50%, -50%) rotate(-45deg); 
+    font-size: 8rem; 
+    color: rgba(255, 255, 255, 0.5); 
+    pointer-events: none; 
+    z-index: 9999; 
   }
   
 footer p {
@@ -334,4 +333,39 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loading-text {
+    font-size: 24px;
+}
+
+.spinner {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    border-top-color: #000;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
