@@ -15,6 +15,6 @@ const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const BOT_TOKEN = '7057297315:AAHP7hoC1xtw1-mEQB1Yo-y7xyCvUSoihnk';
-const CHAT_ID = '900728380';
+const BOT_TOKEN = '';
+const CHAT_ID = '';
 
